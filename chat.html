@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Hover Effect</title>
+    <style>
+        .imges {
+            display: inline-block;
+            border: 2px solid black;
+        }
+
+        #img1 {
+            display: inline-block;
+            border: 2px solid red;
+            float: right;
+            margin-top: -580px;
+            height: 580px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img class="imges" onmouseover="showImage('https://m.media-amazon.com/images/I/71657TiFeHL._SX679_.jpg')" src="https://m.media-amazon.com/images/I/71657TiFeHL._SX679_.jpg" alt="Image 1" width="80px" height="90px"><br>
+        <img class="imges" onmouseover="showImage('https://m.media-amazon.com/images/I/51brdXeugJL._SX679_.jpg')" src="https://m.media-amazon.com/images/I/51brdXeugJL._SX679_.jpg" alt="Image 2" width="80px" height="90px"><br>
+        <img class="imges" onmouseover="showImage('https://m.media-amazon.com/images/I/712CBkmhLhL._SX679_.jpg')" src="https://m.media-amazon.com/images/I/712CBkmhLhL._SX679_.jpg" alt="Image 3" width="80px" height="90px"><br>
+        <img class="imges" onmouseover="showImage('https://m.media-amazon.com/images/I/61f4dTush1L._SX679_.jpg')" src="https://m.media-amazon.com/images/I/61f4dTush1L._SX679_.jpg" alt="Image 4" width="80px" height="90px"><br>
+        <img class="imges" onmouseover="showImage('https://m.media-amazon.com/images/I/81BnjSLm2oL._SX679_.jpg')" src="https://m.media-amazon.com/images/I/81BnjSLm2oL._SX679_.jpg" alt="Image 5" width="80px" height="90px"><br>
+        <img class="imges" onmouseover="showImage('https://m.media-amazon.com/images/I/617JW0DrG8L._SX679_.jpg')" src="https://m.media-amazon.com/images/I/617JW0DrG8L._SX679_.jpg" alt="Image 6" width="80px" height="90px"><br>
+
+        <img id="img1" src="https://m.media-amazon.com/images/I/71657TiFeHL._SX679_.jpg" alt="Large Image">
+    </div>
+
+    <script>
+        function showImage(src) {
+            var getimg = document.getElementById("img1");
+            getimg.setAttribute("src", src);
+        }
+    </script>
+</body>
+</html>

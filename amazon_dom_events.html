@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Hover Example</title>
+    <style>
+        /* Initially hide the second div */
+       
+    </style>
+</head>
+<body>
+    <div style="border: 2px solid red;">
+        <img onmouseover="showDiv(this)" onmouseout="hideDiv()" src="https://m.media-amazon.com/images/I/71657TiFeHL._SX679_.jpg" alt="Image 1" width="80px" height="100px">
+        <img onmouseover="showDiv(this)" onmouseout="hideDiv()" src="https://m.media-amazon.com/images/I/51brdXeugJL._SX679_.jpg" alt="Image 2" width="80px" height="100px">
+        <img onmouseover="showDiv(this)" onmouseout="hideDiv()" src="https://m.media-amazon.com/images/I/712CBkmhLhL._SX679_.jpg" alt="Image 3" width="80px" height="100px">
+        <img onmouseover="showDiv(this)" onmouseout="hideDiv()" src="https://m.media-amazon.com/images/I/61f4dTush1L._SX679_.jpg" alt="Image 4" width="80px" height="100px">
+        <img onmouseover="showDiv(this)" onmouseout="hideDiv()" src="https://m.media-amazon.com/images/I/81BnjSLm2oL._SX679_.jpg" alt="Image 5" width="80px" height="100px">
+        <img onmouseover="showDiv(this)" onmouseout="hideDiv()" src="https://m.media-amazon.com/images/I/617JW0DrG8L._SX679_.jpg" alt="Image 6" width="80px" height="100px">
+    </div>
+
+    <div id="secondDiv" style="border: 2px solid red;">
+        <img id="secondDivImage" src="" alt="Hover Image" >
+    </div>
+
+    <script>
+        function showDiv(imgElement) {
+            var secondDiv = document.getElementById("secondDiv");
+            var secondDivImage = document.getElementById("secondDivImage");
+
+            // Set the source of the image in the second div to the source of the hovered image
+            secondDivImage.src = imgElement.src;
+
+            // Show the second div
+            secondDiv.style.display = "block";
+        }
+
+      
+    </script>
+</body>
+</html>

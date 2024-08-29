@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            /* border: 2px solid red; */
+        }
+        .imgs {
+            border: 2px solid rgb(29, 24, 24);
+        }
+        body {
+            display: flex;
+            gap: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <img class="imgs" src="https://m.media-amazon.com/images/I/71YG+VrvrTL._SX679_.jpg" alt="" width="100px" height="100px">
+        <img class="imgs" src="https://m.media-amazon.com/images/I/71X86mTtOxL._SX679_.jpg" alt="" width="100px" height="100px">
+        <img class="imgs" src="https://m.media-amazon.com/images/I/61S2t5yhVSL._SX679_.jpg" alt="" width="100px" height="100px">
+        <img class="imgs" src="https://m.media-amazon.com/images/I/613YnSr3eOL._SX679_.jpg" alt="" width="100px" height="100px">
+        <img class="imgs" src="https://m.media-amazon.com/images/I/61io+XpflyL._SX679_.jpg" alt="" width="100px" height="100px">
+    </div>
+    <div style="border: 2px solid red; width: 1000px;">
+        <img id="img1" src="https://m.media-amazon.com/images/I/71YG+VrvrTL._SX679_.jpg" alt="">
+    </div>
+    <script>
+        var im1 = document.getElementsByTagName("img");
+        for (let i = 0; i < im1.length - 1; i++) {  // Exclude the last image (img1)
+            im1[i].addEventListener("mouseover", function() {
+                f1(im1[i].src);  // Referencing the correct image by its index
+            });
+        }
+
+        function f1(src) {
+            var getimg1 = document.getElementById("img1");
+            getimg1.setAttribute("src", src);
+        }
+    </script>
+</body>
+</html>

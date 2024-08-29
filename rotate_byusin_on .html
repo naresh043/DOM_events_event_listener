@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <img src="https://images.pexels.com/photos/2166711/pexels-photo-2166711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" width="500px" height="500px">
+        
+
+
+    </div>
+    <div style="text-align: right;">
+        <button onclick="rotate0()">0deg</button>
+        <button onclick="rotate60()">60deg</button>
+        <button onclick="rotate90()">90deg</button>
+        <button onclick="rotate180()">180deg</button>
+        <button onclick="rotate260()">260deg</button>
+    </div>
+    <script>
+        // imgget=document.getElementsByTagName("img")
+        // imgget[0].style.transform ="rotate(20deg)";
+        function rotate0(){
+            imgget=document.getElementsByTagName("img")
+            imgget[0].style.transform ="rotate(0deg)";
+        }
+        function rotate60(){
+            imgget=document.getElementsByTagName("img")
+            imgget[0].style.transform ="rotate(60deg)";
+        }
+        function rotate90(){
+            imgget=document.getElementsByTagName("img")
+            imgget[0].style.transform ="rotate(90deg)";
+        }
+        function rotate180(){
+            imgget=document.getElementsByTagName("img")
+            imgget[0].style.transform ="rotate(180deg)";
+        }
+        function rotate260(){
+            imgget=document.getElementsByTagName("img")
+            imgget[0].style.transform ="rotate(260deg)";
+        }
+    </script>
+</body>
+</html>

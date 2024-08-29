@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            box-shadow: 10px 10px 20px goldenrod;
+            width: 100px;
+            height: 100px;
+            font-size: 15px;
+            text-shadow: 2px 2px 5px yellow;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #div1{
+           display: flex;
+           justify-content: center;
+            border: 2px solid greenyellow;
+            width: 200px;
+        }
+        #div2{
+            display: flex;
+           justify-content: center;
+            border: 2px solid greenyellow;
+            width: 200px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <button id="btn1">
+            Click me with Stopevent propagation
+        </button>
+    </div>
+    <div id="div2">
+        <button id="btn2">Click me without propagation </button>
+    </div>
+    <script>
+       var btn = document.getElementById("btn1");
+        btn.addEventListener("click",function (){
+            event.stopPropagation();
+           btn.style.backgroundColor="red";
+            console.log("naresh");
+        });
+        var div1= document.getElementById("div1");
+        div1.addEventListener("click",function (){
+            div1.style.backgroundColor="black";
+            console.log("PAVAN");
+        });
+
+        var btnn=document.getElementById("btn2");
+        btnn.addEventListener("click",function(){
+            btnn.style.backgroundColor="red";
+
+        },true);
+
+        var divv=document.getElementById("div2");
+        divv.addEventListener("click", function(){
+            divv.style.backgroundColor="black";
+        },true);
+    </script>
+</body>
+</html>
